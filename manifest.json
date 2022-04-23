@@ -1,0 +1,16 @@
+{
+    "name": "Paid Warn",
+    "version": "1.0",
+    "manifest_version": 3,
+    "action": {
+      "default_title": "Warn if a link could be behind a paywall"
+    },
+    "permissions": ["activeTab", "scripting"],
+    "content_scripts": [
+        {
+          "matches": ["https://*/*"],
+          "run_at": "document_idle",
+          "js": ["content.js"]
+        }
+    ]
+}
