@@ -7,15 +7,16 @@ const blacklist = [
 	'wired.com',
 ];
 
-let regex = blacklist.reduce((acc, el) => {
-	return (acc += `${el.split('.')[0]}\\.${el.split('.')[1]}|`);
-}, '');
-regex = new RegExp(regex.slice(0, -1));
-
-// console.log('regex', regex);
+let regex = new RegExp(
+	blacklist
+		.reduce((acc, el) => {
+			return (acc += `${el.split('.')[0]}\\.${el.split('.')[1]}|`);
+		}, '')
+		.slice(0, -1)
+);
 
 document.querySelectorAll('a').forEach((node) => {
 	if (regex.test(node.href)) {
-		node.innerText += ' [PAID]';
+		node.innerText += ' [PAYWALL]';
 	}
 });

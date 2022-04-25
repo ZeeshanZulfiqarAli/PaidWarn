@@ -15,7 +15,9 @@ To use this extension, you need:
 
 Now the extension should be enabled and work on every website.
 
-Test URLs:
+## Test URLs:
+
+One enabled, check this README for the [PAYWALL] tag on these URLs:
 
 https://www.nytimes.com/
 
