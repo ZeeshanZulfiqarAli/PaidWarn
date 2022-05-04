@@ -1,11 +1,5 @@
-const blacklist = [
-	'economist.com',
-	'fortune.com',
-	'glassdoor.com',
-	'nytimes.com',
-	'washingtonpost.com',
-	'wired.com',
-];
+const sites = require('./sites');
+const blacklist = Object.values(sites);
 
 let regex = new RegExp(
 	blacklist
