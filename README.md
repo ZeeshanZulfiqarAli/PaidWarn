@@ -7,10 +7,15 @@ Google chrome extension to warn if the url is known to be behind a paywall
 To use this extension, you need:
 
 1. Clone the repo
-2. Enable developers mode in extensions page
-3. Click on Load unpacked button:
+2. Navigate to the repo in terminal
+3. Install the dependencies by using following command
+    `yarn` or `npm i`
+4. Generate build by using following command
+    `yarn build` or `npm run build`
+5. Enable developers mode in extensions page
+6. Click on Load unpacked button:
 
--   Navigate to the repo
+-   Navigate to the repo and select `build` folder
 -   Click Select button
 
 Now the extension should be enabled and work on every website.

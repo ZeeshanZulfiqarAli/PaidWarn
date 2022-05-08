@@ -3,14 +3,15 @@
     "version": "1.0",
     "manifest_version": 3,
     "action": {
-      "default_title": "Warn if a link could be behind a paywall"
+      "default_title": "Warn if a link could be behind a paywall",
+      "default_popup": "popup.html"
     },
-    "permissions": ["activeTab", "scripting"],
+    "permissions": ["activeTab", "scripting", "storage"],
     "content_scripts": [
         {
           "matches": ["https://*/*"],
           "run_at": "document_idle",
-          "js": ["content.js"]
+          "js": ["content.bundle.js"]
         }
     ]
 }
